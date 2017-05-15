@@ -1,0 +1,16 @@
+<div class="well">
+  <h1>{{feed.title}}</h1>
+
+  <table class="table table-striped">
+    <tr ng-repeat="item in feed">
+      <td>
+        <a href="#!/feed/{{feed.id}}/item/{{item.title|hash}}">
+          <strong ng-bind="item.title"></strong>
+        </a>
+      </td>
+      <td>
+        {{item.pubDate}}
+      </td>
+    </tr>
+  </table>
+</div>
